@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Mimi, With Love 💗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="welcome">
+        <div class="heart">♡</div>
+
+        <p class="small-text">A LITTLE SOMETHING MADE JUST FOR YOU</p>
+
+        <h1>Happy Birthday,<br><span>Mimi</span> 🎀</h1>
+
+        <p class="message">
+            To my favourite person in the whole world.
+            Today, this little corner of the internet belongs to you.
+        </p>
+
+        <button id="openGift" aria-expanded="false">
+            Open Your Surprise 💌
+        </button>
+
+        <div id="surpriseMessage" class="surprise-message" hidden>
+            <div class="surprise-heart">💗</div>
+
+            <h2>Welcome to Our Little World, Mimi</h2>
+
+            <p>
+                I made this little place just for you, filled with memories,
+                letters, and surprises. Whenever you visit, I hope it reminds
+                you how special you are.
+            </p>
+
+            <div class="menu-grid">
+                <button class="menu-button" data-section="memories">
+                    📸 Our Memories
+                </button>
+
+                <button class="menu-button" data-section="letters">
+                    💌 Open When...
+                </button>
+
+                <button class="menu-button" data-section="gift">
+                    🎁 Your Special Gift
+                </button>
+            </div>
+
+            <div id="contentArea" class="content-area" aria-live="polite"></div>
+        </div>
+
+        <p class="footer">Made with love, just for you ♡</p>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
