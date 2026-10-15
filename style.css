@@ -144,6 +144,7 @@ button:disabled {
 .content-area {
     margin-top: 25px;
     text-align: left;
+    scroll-margin-top: 20px;
 }
 
 .content-area h3 {
@@ -171,6 +172,13 @@ button:disabled {
     margin-bottom: 12px;
 }
 
+.letter-card h4 {
+    color: #c9507e;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
 .letter-card button,
 .gift-card button {
     margin-top: 10px;
@@ -186,6 +194,11 @@ button:disabled {
 
 .back-button:hover {
     background: #edbfd2;
+}
+
+.section-action {
+    display: block;
+    margin: 18px auto 0;
 }
 
 .footer {
@@ -216,6 +229,114 @@ button:disabled {
     }
 }
 
+/* PHOTO AND VIDEO GALLERY */
+
+.memory-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    align-items: start;
+}
+
+.photo-card {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    padding: 8px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid #f3d2df;
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 9px;
+}
+
+.photo-card video {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    background: #2b1821;
+    border-radius: 9px;
+}
+
+.photo-caption {
+    min-height: 38px;
+    margin: 10px 2px 2px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.media-error {
+    border-color: #e8a4b8;
+}
+
+/* BIRTHDAY LETTER */
+
+.birthday-letter {
+    max-width: 760px;
+    margin: 24px auto;
+    padding: 30px 24px;
+    background: #fff8fb;
+    color: #70445a;
+    border: 1px solid #f2c7d8;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(190, 90, 130, 0.12);
+    line-height: 1.85;
+    overflow-wrap: anywhere;
+}
+
+.birthday-letter h2 {
+    color: #c04478;
+    text-align: center;
+    margin: 0 0 10px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+.birthday-letter .letter-subtitle {
+    color: #d45d91;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 28px;
+}
+
+.birthday-letter .letter-paragraph {
+    white-space: pre-wrap;
+    margin: 0 0 22px;
+    font-size: 15px;
+    line-height: 1.9;
+    color: #70445a;
+}
+
+.birthday-letter .letter-ending {
+    text-align: center;
+    color: #c04478;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+    .birthday-letter {
+        padding: 22px 16px;
+        margin: 16px auto;
+    }
+
+    .birthday-letter .letter-paragraph {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+}
+
 @media (max-width: 480px) {
     .welcome {
         padding: 35px 18px;
@@ -232,57 +353,7 @@ button:disabled {
     .surprise-message h2 {
         font-size: 23px;
     }
-}
 
-/* ===== FIX PHOTO AND VIDEO SIZES ===== */
-
-.memory-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 14px;
-    align-items: start;
-}
-
-.photo-card {
-    width: 100%;
-    min-width: 0;
-    overflow: hidden;
-    padding: 8px;
-    border-radius: 14px;
-    background: #fff;
-}
-
-/* Make every photo the same size */
-.photo-card img {
-    display: block;
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 9px;
-}
-
-/* Make every video fit neatly inside its card */
-.photo-card video {
-    display: block;
-    width: 100%;
-    height: 230px;
-    object-fit: contain;
-    background: #2b1821;
-    border-radius: 9px;
-}
-
-/* Keep captions tidy */
-.photo-caption {
-    min-height: 38px;
-    margin: 10px 2px 2px;
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.5;
-    overflow-wrap: anywhere;
-}
-
-@media (max-width: 480px) {
     .memory-gallery {
         gap: 9px;
     }
@@ -310,13 +381,4 @@ button:disabled {
     .photo-card video {
         height: 240px;
     }
-}
-
-/* Hide the unwanted file error messages */
-.media-error-message {
-    display: none !important;
-}
-
-.media-error .media-error-message {
-    display: none !important;
 }
